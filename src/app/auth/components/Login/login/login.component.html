@@ -1,0 +1,62 @@
+<section>
+  <div class="w-full mt-[8%] flex items-center justify-center cairo-regular">
+    <div class="login-box rounded-lg py-12 px-8 w-[29rem]">
+      <!-- image and header start -->
+      <div class="flex flex-col items-center justify-center">
+        <img
+          width="70px"
+          src="https://png.pngtree.com/png-vector/20220621/ourmid/pngtree-isolated-waving-hand-vector-icon-on-white-backgroundeps-10-vector-png-image_46317074.jpg"
+          alt=""
+        />
+        <p class="cairo-bold mt-2 mb-4 text-3xl">أهلا بك!</p>
+        <p class="cairo-regular opacity-60">
+          يرجى ادخال اسم المستخدم وكلمة المرور
+        </p>
+      </div>
+      <!-- image and header ends -->
+
+      <!-- form start -->
+      <form>
+        <!-- username start -->
+        <div class="mt-16">
+          <p class="relative top-2 right-5">أدخل اسم المستخدم</p>
+          <input
+            pInputText
+            class="password-input w-full h-14 rounded-lg"
+            type="text"
+            id="username"
+            [(ngModel)]="username"
+          />
+        </div>
+        <!-- username ends -->
+
+        <!-- password start -->
+        <div class="mt-8 relative">
+          <button
+            (click)="showPassword()"
+            tooltipPosition="left"
+            pTooltip="أظهار كلمة السر"
+            class="bg-white absolute left-1 flex items-center justify-center top-1 h-12 w-12 rounded-lg"
+          >
+            <i class="pi pi-eye text-gray-500"></i>
+          </button>
+          <input
+            pInputText
+            placeholder="أدخل كلمة المرور"
+            class="password-input w-full h-14 rounded-lg bg-gray-50 cairo-regular"
+            [type]="inputType"
+          />
+        </div>
+        <!-- password ends -->
+
+        <div class="mt-12">
+          <button
+            class="cairo-regular bg-[#008080] text-white w-full rounded-xl py-4"
+          >
+            تسجيل الدخول
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

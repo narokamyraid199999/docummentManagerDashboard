@@ -1,0 +1,8 @@
+.password-input {
+  border: 1px lightgray solid;
+  padding-right: 12px;
+}
+
+.login-box {
+  box-shadow: 1px 1px 27px rgba(0, 0, 0, 0.06);
+}

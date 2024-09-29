@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+/* Order */
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+.cairo-regular {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-meduim {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-bold {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+/* Base Layer for Tailwind */
+@layer tailwind-base {
+  @tailwind base;
+}
+
+/* PrimeNG Layer (no need to modify as the imports handle this) */
+@layer primeng {
+}
+
+/* Components and Utilities Layer for Tailwind */
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
