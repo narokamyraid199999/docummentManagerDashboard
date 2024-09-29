@@ -5,15 +5,18 @@ import { AuthComponent } from './auth.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/Login/login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TooltipModule } from 'primeng/tooltip';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [AuthComponent, NavBarComponent, LoginComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     TooltipModule,
     InputTextModule,
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
     FormsModule,
     RouterModule.forChild([
       {

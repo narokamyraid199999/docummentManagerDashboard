@@ -1,3 +1,12 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#2a9df4"
+  type="ball-scale-multiple"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p></ngx-spinner
+>
+
 <section>
   <div class="w-full mt-[8%] flex items-center justify-center cairo-regular">
     <div class="login-box rounded-lg py-12 px-8 w-[29rem]">
@@ -16,17 +25,38 @@
       <!-- image and header ends -->
 
       <!-- form start -->
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
         <!-- username start -->
         <div class="mt-16">
           <p class="relative top-2 right-5">أدخل اسم المستخدم</p>
           <input
+            [ngClass]="{ 'ng-invalid': true, 'ng-dirty': true }"
             pInputText
             class="password-input w-full h-14 rounded-lg"
-            type="text"
+            type="email"
             id="username"
-            [(ngModel)]="username"
+            formControlName="email"
           />
+          <div class="mt-2" *ngIf="!loginForm.valid && loginForm.touched">
+            <p
+              class="text-red-500 text-sm"
+              *ngIf="
+                loginForm.get('email')!.errors &&
+                loginForm.get('email')!.errors['email']
+              "
+            >
+              صيغة الايميل غير صحيحة
+            </p>
+            <p
+              class="text-red-500 text-sm"
+              *ngIf="
+                loginForm.get('email')!.errors &&
+                loginForm.get('email')!.errors['required']
+              "
+            >
+              هذا الحقل مطلوب
+            </p>
+          </div>
         </div>
         <!-- username ends -->
 
@@ -45,12 +75,43 @@
             placeholder="أدخل كلمة المرور"
             class="password-input w-full h-14 rounded-lg bg-gray-50 cairo-regular"
             [type]="inputType"
+            formControlName="password"
           />
+          <div class="mt-2" *ngIf="!loginForm.valid && loginForm.touched">
+            <p
+              class="text-red-500 text-sm"
+              *ngIf="
+                loginForm.get('password')!.errors &&
+                loginForm.get('password')!.errors['minlength']
+              "
+            >
+              الباسوورد يجب ان يكون 6 ارقام على الاقل
+            </p>
+            <p
+              class="text-red-500 text-sm"
+              *ngIf="
+                loginForm.get('password')!.errors &&
+                loginForm.get('password')!.errors['required']
+              "
+            >
+              هذا الحقل مطلوب
+            </p>
+            <p
+              class="text-red-500 text-sm"
+              *ngIf="
+                loginForm.get('password')!.errors &&
+                loginForm.get('password')!.errors['maxlength']
+              "
+            >
+              تجاوزت العدد المسموح
+            </p>
+          </div>
         </div>
         <!-- password ends -->
 
         <div class="mt-12">
           <button
+            type="submit"
             class="cairo-regular bg-[#008080] text-white w-full rounded-xl py-4"
           >
             تسجيل الدخول
