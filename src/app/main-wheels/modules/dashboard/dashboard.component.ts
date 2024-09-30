@@ -47,28 +47,52 @@ export class DashboardComponent {
 
   products: any[] = [
     {
-      code: 'ps',
-      name: 'tamer',
-      category: 'electronics',
-      quantity: 15,
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
     },
     {
-      code: 'ps',
-      name: 'tamer',
-      category: 'electronics',
-      quantity: 15,
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
     },
     {
-      code: 'ps',
-      name: 'tamer',
-      category: 'electronics',
-      quantity: 15,
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
     },
     {
-      code: 'ps',
-      name: 'tamer',
-      category: 'electronics',
-      quantity: 15,
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
+    },
+    {
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
+    },
+    {
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
+    },
+    {
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
+    },
+    {
+      code: '1222345',
+      task: 'اسم المهمة',
+      category: 'فئة المهمة',
+      finallDate: '12/03/2024',
     },
   ];
 }

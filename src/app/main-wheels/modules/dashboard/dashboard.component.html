@@ -1,6 +1,6 @@
 <section>
   <!-- root div -->
-  <div class="grid grid-cols-6 py-10 gap-x-5 px-[2%]">
+  <div class="grid grid-cols-6 py-10 gap-x-8 px-[2%]">
     <!-- dashboard -->
     <div class="col-span-4">
       <div class="grid grid-cols-3 gap-x-10">
@@ -38,18 +38,52 @@
           >
             <ng-template pTemplate="header">
               <tr class="border-b">
-                <th>Code</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Quantity</th>
+                <th style="width: 16.6%" class="cairo-bold text-sm text-center">
+                  #
+                </th>
+                <th style="width: 16.6%" class="cairo-bold text-sm text-center">
+                  اسم المهمة
+                </th>
+                <th style="width: 16.6%" class="cairo-bold text-sm text-center">
+                  الفئة
+                </th>
+                <th style="width: 16.6%" class="cairo-bold text-sm text-center">
+                  التاريخ النهائي
+                </th>
+                <th style="width: 16.6%" class="cairo-bold text-sm text-center">
+                  حالة المهمة
+                </th>
+                <th style="width: 16.6%" class="cairo-bold text-sm text-center">
+                  الخيارات
+                </th>
               </tr>
             </ng-template>
             <ng-template pTemplate="body" let-product>
               <tr>
-                <td>{{ product.code }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.category }}</td>
-                <td>{{ product.quantity }}</td>
+                <td class="cairo-regular text-sm text-center">
+                  {{ product.code }}
+                </td>
+                <td class="cairo-regular text-sm text-center">
+                  {{ product.task }}
+                </td>
+                <td class="cairo-regular text-sm text-center">
+                  {{ product.category }}
+                </td>
+                <td class="cairo-regular text-sm text-center">
+                  {{ product.finallDate }}
+                </td>
+                <td class="cairo-regular text-sm flex justify-center">
+                  <button class="bg-red-50 py-2 px-4 rounded-lg text-red-500">
+                    غير منجزة
+                  </button>
+                </td>
+                <td class="cairo-regular text-sm text-center">
+                  <button
+                    class="border px-1 border-black text-center rounded-full"
+                  >
+                    <span>...</span>
+                  </button>
+                </td>
               </tr>
             </ng-template>
           </p-table>
