@@ -3,30 +3,77 @@
   <div class="grid grid-cols-6 py-10 gap-x-5 px-[2%]">
     <!-- dashboard -->
     <div class="col-span-4">
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quaerat
-        eum sed, animi ullam aperiam, asperiores facilis, inventore quia
-        similique quo. Cum minima nisi facere, deserunt provident eaque,
-        nesciunt culpa sapiente accusamus cupiditate reprehenderit neque sequi
-        atque odit possimus iusto dolores illum delectus nihil. Exercitationem
-        excepturi distinctio quis officiis blanditiis! Placeat fugiat odio alias
-        repellat, error fugit ea porro, aliquid sint dolore rem incidunt
-        asperiores nemo quisquam ipsa animi nesciunt eaque aliquam ipsam ratione
-        cum! Culpa provident officiis tenetur soluta temporibus eum doloremque
-        facilis deleniti! Temporibus praesentium fugiat, consequuntur soluta
-        laudantium molestias eum atque eos, excepturi nihil, quisquam
-        exercitationem nisi!
-      </p>
+      <div class="grid grid-cols-3 gap-x-10">
+        <app-title-card
+          [color]="elm.color"
+          [title]="elm.title"
+          [number]="elm.number"
+          [icon]="elm.icon"
+          [statics]="elm.statics"
+          *ngFor="let elm of titleCard"
+        ></app-title-card>
+      </div>
+
+      <!-- tasks root -->
+      <div class="simple-sadow mt-10 bg-white rounded-2xl px-10 py-12">
+        <div class="mb-10 flex items-center justify-between">
+          <p class="cairo-bold text-lg">المهام</p>
+          <div>
+            <p-selectButton
+              styleClass="text-green-500 cairo-meduim"
+              [options]="tasks"
+              [(ngModel)]="selectedTask"
+              optionLabel="label"
+              optionValue="value"
+            />
+          </div>
+        </div>
+
+        <!-- task table -->
+        <div>
+          <p-table
+            [value]="products"
+            styleClass="p-datatable-striped"
+            [tableStyle]="{ 'min-width': '50rem' }"
+          >
+            <ng-template pTemplate="header">
+              <tr class="border-b">
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+              <tr>
+                <td>{{ product.code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.quantity }}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
     </div>
 
     <!-- ads and news -->
-    <div class="col-span-2 shadow-md bg-white rounded-2xl px-10 py-12">
-      <p class="mb-10" *ngFor="let elm of [1, 2, 3, 4, 5, 6]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        molestiae tempora ab qui sapiente recusandae, amet nemo aspernatur
-        fugiat laborum ut eaque delectus accusantium est cumque quia!
-        Necessitatibus, sed laudantium!
-      </p>
+    <div class="col-span-2 simple-sadow bg-white rounded-2xl px-10 py-12">
+      <div class="mb-16 flex items-center justify-between">
+        <p class="cairo-bold text-lg">اعلانات واخبار</p>
+        <div>
+          <p-selectButton
+            styleClass="text-green-500 cairo-meduim"
+            [options]="stateOptions"
+            [(ngModel)]="value"
+            optionLabel="label"
+            optionValue="value"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-y-12">
+        <app-news-card *ngFor="let elm of [1, 2, 3, 4, 5, 6]"></app-news-card>
+      </div>
     </div>
   </div>
 </section>

@@ -3,6 +3,19 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
+@import "primeng/resources/primeng.css";
+
+@layer tailwind-base, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
 .cairo-regular {
   font-family: "Cairo", sans-serif;
   font-optical-sizing: auto;
@@ -27,19 +40,6 @@
   font-variation-settings: "slnt" 0;
 }
 
-@layer tailwind-base, primeng, tailwind-utilities;
-
-/* Base Layer for Tailwind */
-@layer tailwind-base {
-  @tailwind base;
-}
-
-/* PrimeNG Layer (no need to modify as the imports handle this) */
-@layer primeng {
-}
-
-/* Components and Utilities Layer for Tailwind */
-@layer tailwind-utilities {
-  @tailwind components;
-  @tailwind utilities;
+.simple-sadow {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.04);
 }
