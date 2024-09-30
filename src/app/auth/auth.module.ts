@@ -16,7 +16,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ReactiveFormsModule,
     TooltipModule,
     InputTextModule,
-    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
+    NgxSpinnerModule.forRoot({ type: 'ball-clip-rotate' }),
     FormsModule,
     RouterModule.forChild([
       {
