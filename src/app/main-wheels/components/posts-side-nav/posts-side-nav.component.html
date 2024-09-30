@@ -1,0 +1,15 @@
+<p-sidebar position="right" [(visible)]="sidebarVisible" styleClass="w-[41rem]">
+  <ng-template pTemplate="header">
+    <span class="font-semibold text-lg cairo-bold">المنشورات</span>
+  </ng-template>
+  <div class="border-b shadow-sm"></div>
+
+  <!-- contect -->
+  <div class="bg-gray-50">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+      repellendus?
+    </p>
+  </div>
+</p-sidebar>
+<p-button (onClick)="sidebarVisible = true" icon="pi pi-arrow-right" />

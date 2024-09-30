@@ -21,6 +21,8 @@ export class DashboardComponent {
 
   checked: boolean = true;
 
+  sidebarVisible: boolean = true;
+
   titleCard: any[] = [
     {
       title: 'عدد الملفات الواردة',
