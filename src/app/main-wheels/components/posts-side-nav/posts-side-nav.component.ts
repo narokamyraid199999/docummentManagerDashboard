@@ -3,12 +3,13 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SidebarModule } from 'primeng/sidebar';
 import { PostsServicesService } from '../../services/posts-services.service';
+import { UserCommintComponent } from '../user-commint/user-commint.component';
 
 @Component({
   selector: 'app-posts-side-nav',
   templateUrl: './posts-side-nav.component.html',
   standalone: true,
-  imports: [SidebarModule, CommonModule, FormsModule],
+  imports: [SidebarModule, CommonModule, FormsModule, UserCommintComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styleUrl: './posts-side-nav.component.css',
 })
