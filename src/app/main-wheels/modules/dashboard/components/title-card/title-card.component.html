@@ -1,4 +1,11 @@
-<div [class]="'bg-' + color + ' rounded-2xl p-4 pr-10 pb-8 simple-sadow'">
+<div
+  [ngClass]="{
+    'bg-purple-100': color == 'purple-100',
+    'bg-green-100': color == 'green-100',
+    'bg-blue-100': color == 'blue-100'
+  }"
+  class="rounded-2xl p-4 pr-10 pb-8 simple-sadow"
+>
   <div class="flex items-center justify-between">
     <p class="cairo-regular text-sm">{{ title }}</p>
     <button class="bg-[#FAFEFB] w-12 h-12 rounded-2xl">
