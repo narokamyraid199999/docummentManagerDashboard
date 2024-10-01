@@ -4,8 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class PostsServicesService {
+export class NotificationService {
   constructor() {}
 
-  isOpen: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  isOpen: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 }

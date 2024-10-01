@@ -1,0 +1,18 @@
+<p-sidebar
+  position="right"
+  [(visible)]="sidebarVisible"
+  styleClass="w-[33rem] "
+>
+  <ng-template pTemplate="header">
+    <span class="font-semibold text-lg cairo-bold">الأشعارات</span>
+  </ng-template>
+  <div class="border-b shadow-sm"></div>
+
+  <!-- contect -->
+  <div class="px-4 pt-8 pb-8 w-full">
+    <div>
+      <app-notification-card></app-notification-card>
+    </div>
+  </div>
+</p-sidebar>
+<p-button (onClick)="sidebarVisible = true" icon="pi pi-arrow-right" />
