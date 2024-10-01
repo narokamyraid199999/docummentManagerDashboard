@@ -11,7 +11,9 @@
   <!-- contect -->
   <div class="px-4 pt-8 pb-8 w-full">
     <div>
-      <app-notification-card></app-notification-card>
+      <app-notification-card
+        *ngFor="let elm of [1, 2, 3, 4, 5, 6, 7, 8]"
+      ></app-notification-card>
     </div>
   </div>
 </p-sidebar>
