@@ -9,4 +9,6 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule],
   styleUrl: './post-card.component.css',
 })
-export class PostCardComponent {}
+export class PostCardComponent {
+  date = Date.now();
+}

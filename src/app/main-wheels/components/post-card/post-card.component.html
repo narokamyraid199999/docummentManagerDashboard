@@ -1,5 +1,35 @@
-<div class="mt-8">
+<div class="mt-8 simple-sadow bg-white rounded-2xl px-8 py-2">
   <div>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, sit.
+    <!-- post header -->
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center gap-x-2">
+        <img
+          class="w-10"
+          src="https://static.vecteezy.com/system/resources/previews/000/439/863/large_2x/vector-users-icon.jpg"
+          alt=""
+        />
+        <div>
+          <p class="cairo-bold text-sm">احمد السيد</p>
+          <p class="text-sm mt-1 text-gray-400">
+            {{ date | date : "MMM dd, yyyy 'at' hh:mm a" }}
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="border px-1.5 border-black font-bold text-center rounded-full"
+        >
+          <span>...</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- post body -->
+    <div class="cairo-meduim text-sm leading-7">
+      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+      من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+      الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+    </div>
   </div>
 </div>
