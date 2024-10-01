@@ -8,7 +8,12 @@ import { PostsSideNavComponent } from './components/posts-side-nav/posts-side-na
 
 @NgModule({
   declarations: [MainWheelsComponent, WheelNavbarComponent],
-  imports: [CommonModule, MainWheelsRoutingModule, PostsSideNavComponent],
+  imports: [
+    CommonModule,
+    MainWheelsRoutingModule,
+    PostsSideNavComponent,
+    PostsSideNavComponent,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class MainWheelsModule {}

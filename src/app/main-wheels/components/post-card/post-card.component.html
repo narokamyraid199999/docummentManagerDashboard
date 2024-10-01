@@ -1,7 +1,7 @@
 <div class="mt-8 simple-sadow bg-white rounded-2xl px-8 py-2">
   <div>
     <!-- post header -->
-    <div class="flex items-center justify-between mb-3">
+    <div class="flex items-center justify-between">
       <div class="flex items-center gap-x-2">
         <img
           class="w-10"
@@ -26,10 +26,67 @@
     </div>
 
     <!-- post body -->
-    <div class="cairo-meduim text-sm leading-7">
+    <div class="cairo-meduim text-sm leading-7 mt-2.5 mb-5">
       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
       من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
       الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+    </div>
+
+    <!-- imgs part -->
+    <div *ngIf="withImage" class="grid grid-cols-3 gap-x-5">
+      <div class="col-span-1">
+        <div>
+          <img
+            class="rounded-2xl simple-sadow"
+            src="https://media.gettyimages.com/id/1451456915/photo/female-freelance-developer-coding-and-programming-coding-on-two-with-screens-with-code.jpg?s=612x612&w=gi&k=20&c=DxUOtEcP_uDY_QINyLlGFQdB5KLKO7EgSDbIMQqOkq4="
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="rounded-2xl simple-sadow mt-5"
+            src="https://plus.unsplash.com/premium_photo-1683140655656-20448abc55da?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXIlMjBwcm9ncmFtbWVyfGVufDB8fDB8fHww"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-span-2">
+        <img
+          class="rounded-2xl simple-sadow"
+          src="https://t3.ftcdn.net/jpg/03/35/34/80/360_F_335348056_yY8QyHP966KePjyutnns1Puwt2bnngZc.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- like and commint button -->
+    <div class="border-y py-2 mt-5">
+      <div class="flex items-center justify-between">
+        <!-- like and commint -->
+        <div class="flex items-center gap-x-7">
+          <button>
+            <i class="pi pi-thumbs-up"></i
+            ><span class="text-sm text-gray-600 mr-2">10</span>
+          </button>
+          <button>
+            <i class="pi pi-comment"></i
+            ><span class="text-sm text-gray-600 mr-2">0</span>
+          </button>
+        </div>
+
+        <!-- share -->
+        <div>
+          <button>
+            <i class="pi pi-share-alt"></i
+            ><span class="text-sm text-gray-600 mr-2">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- commint  -->
+    <div>
+      <app-post-card-commint></app-post-card-commint>
     </div>
   </div>
 </div>

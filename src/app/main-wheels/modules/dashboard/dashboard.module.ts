@@ -8,7 +8,6 @@ import { NewsCardComponent } from './components/news-card/news-card.component';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
-import { PostsSideNavComponent } from '../../components/posts-side-nav/posts-side-nav.component';
 @NgModule({
   declarations: [DashboardComponent, TitleCardComponent, NewsCardComponent],
   imports: [
@@ -17,7 +16,6 @@ import { PostsSideNavComponent } from '../../components/posts-side-nav/posts-sid
     SelectButtonModule,
     DashboardRoutingModule,
     TableModule,
-    PostsSideNavComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
