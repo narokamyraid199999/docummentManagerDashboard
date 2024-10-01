@@ -4,12 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { SidebarModule } from 'primeng/sidebar';
 import { PostsServicesService } from '../../services/posts-services.service';
 import { UserCommintComponent } from '../user-commint/user-commint.component';
+import { PostCardComponent } from '../post-card/post-card.component';
 
 @Component({
   selector: 'app-posts-side-nav',
   templateUrl: './posts-side-nav.component.html',
   standalone: true,
-  imports: [SidebarModule, CommonModule, FormsModule, UserCommintComponent],
+  imports: [
+    SidebarModule,
+    CommonModule,
+    FormsModule,
+    UserCommintComponent,
+    PostCardComponent,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styleUrl: './posts-side-nav.component.css',
 })

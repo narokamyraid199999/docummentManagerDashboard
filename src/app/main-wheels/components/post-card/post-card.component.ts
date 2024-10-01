@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-post-card',
   templateUrl: './post-card.component.html',
-  styleUrl: './post-card.component.css'
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  styleUrl: './post-card.component.css',
 })
-export class PostCardComponent {
-
-}
+export class PostCardComponent {}
